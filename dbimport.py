@@ -163,7 +163,6 @@ def add_to_database(entries,database):
 
 	with con:
 		cur = con.cursor()
-		
 		cur.executemany('INSERT INTO Sequence(Plate, Clone, Primer, Run_date, Student, Instructor, Institution, Quality, FASTA, ABI, Pursue, "Comment") VALUES(?, ?, ?, ?, ?, ?, ?, ?, ?, ?, null, null)',entries)
 
 def clean_up(source, file_list,dest):
