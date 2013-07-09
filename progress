@@ -1,7 +1,0 @@
-<<<<<<< HEAD
-manual.py: stuck at manual manipulation of the sequence files. Figure out a scheme to move files around so as to keep confusion to a minimum.
-
-blast.py: mid-way through making the blast function. This function should return a tuple which conforms to the database form, so that it can be inserted into the Blast table inside the database.
-=======
-Change the add_to_database function so that the quality is in the tuple instead of as a condition in the database.
->>>>>>> manual
