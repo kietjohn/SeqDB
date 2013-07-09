@@ -90,6 +90,10 @@ Blast table
 	<th>ID</th>
 	<th>Genome</th>
 	<th>Organism</th>
+<<<<<<< HEAD
+=======
+	<th>E_value</th>
+>>>>>>> develop
 	<th>Query_from</th>
 	<th>Query_to</th>
 	<th>Subject_from</th>
@@ -101,6 +105,10 @@ Blast table
 	<td>2384</td>
 	<td>CP002585.1</td>
 	<td>Pseudomonas brassicacearum subsp. brassicacearum NFM421</td>
+<<<<<<< HEAD
+=======
+	<td>1e-145</td>
+>>>>>>> develop
 	<td>100</td>
 	<td>745</td>
 	<td>40555456</td>
@@ -117,6 +125,11 @@ Blast table
 	<dd>Genome ID of the matching organism. The value used here is the Genebank ID, not the accession ID.</dd>
 	<dt>Organism</dt>
 	<dd>Name of the organism that this gene is found in, with the highest certainty by the BLASTn search.</dd>
+<<<<<<< HEAD
+=======
+	<dt>E_value</dt>
+	<dd>Expected matching sequences in the database just by chance.</dd>
+>>>>>>> develop
 	<dt>Query_from and Query_to</dt>
 	<dd>Location of the matching hit on the query.</dd>
 	<dt>Subject_from and Subject_to</dt>
@@ -130,4 +143,8 @@ Blast table
 **The program**
 The program is written in Python. It requires BioPython to parse and handle the sequence files, as well as perform and parse the BLAST searches. The program uses Tkinter as the interface package.
 
+<<<<<<< HEAD
 In short summary, the program will load the list of files inside the Good and Bad folder, iterate through the files to extract the necessary information, and then add those information into the record database. Then it move the files into their designated folders. One pitfall of this approach is that the sequence files might be entered into the record database, only to have it being deleted at the target site.
+=======
+In short summary, the program will load the list of files inside the Good and Bad folder, iterate through the files to extract the necessary information, and then add those information into the record database. Then it move the files into their designated folders. One pitfall of this approach is that the sequence files might be entered into the record database, only to have it being deleted at the target site.
+>>>>>>> develop
