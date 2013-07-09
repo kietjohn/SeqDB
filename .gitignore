@@ -1,0 +1,23 @@
+*.swp
+*.pyc
+*.db
+*.ab1
+*.fasta
+*.pdf
+*.seq
+*.phd
+finchtv
+FinchTV
+log.txt
+notes.txt
+*.xml
+TODO
+exp.py
+blast_exp.py
+previous
+Sequence\ Files/
+Resources/
+temp/
+tests/test_data/
+env/
+doc/_build
