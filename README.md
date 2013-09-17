@@ -2,14 +2,25 @@ SeqDB
 =====
 This program simply parses through a list of .ABI files provided by the user, organize the files into a hierarchical structure, and insert the corresponding entries into a simple SQL database. 
 
-Features:
----------
- - organizing 
+Requirements:
+-------------
+ - Biopython
+ - PyQt 4
+
+Structure overview:
+-------------------
+This program consists of several pieces/modules that function together:
+ - The *Sequence* module handles individual sequence files, and extract information from them.
+ - The *TraceFile* module works with a list of sequence files, using the *Sequence* module to extract information.
+ - The *Database* module handles interactions with the database.
+ - The *main* module provides the interface created in Qt, and compiled into python code.
+ - Some accessory parts: *tools* contains some useful functions for file handling, *parameters* contains settings for other modules, *tests* facilitates nosetests for the modules (testing data not included).
+
 
 **Using the database**
 
 1. Copy/Move the sequence files into the Input folder.
-2. Click the "Check Quality" button to separate out the good and bad quality ones. Then click "View Uncertains" to see the files whose quality is inbetween good and bad. Judge if the sequence is *good enough* for giving meaningful BLASTn result. If yes, move it to the Good folder; if not, Bad folder.
+2. Click the "Check Quality" button to separate out the good and bad quality ones. Then click "View Uncertains" to see the files whose quality is in-between good and bad. Judge if the sequence is *good enough* for giving meaningful BLASTn result. If yes, move it to the Good folder; if not, Bad folder.
 3. Input the information about the sequence files to the fields in Step 2, and check that the information are correct.
 4. Click the "Import Files" button. This will import the sequence files into the SQL database, create FASTA version of each sequence, and organize all the files into folders according to their Plate/Clone Alphabet. This will also produce a log file, which is equivalent to the transaction log on the interface.
 5. If there is any exception, click the "View Exceptions" button to view those files. If any exception file is a valid trace file, then use the manual input interface to add it into the database. Otherwise, the user should remove the file.
